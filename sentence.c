@@ -34,14 +34,17 @@ Welcome To C!!
 #include <stdlib.h>
 
 int main() 
-{char ch;
-char s[30];
-char sen[100];
+{
+char ch,s[100] ;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     scanf("%c",&ch);
-    scanf("%s",&s);
-    scanf("%[^f]s",&sen);
     printf("%c\n",ch);
-    printf("%s",s);
-    printf("%s",sen);   
+    scanf("%s",s);
+    printf("%s\n",s);
+    scanf("\n");//to avoid new line character as input to next string
+    scanf("%[^\n]%*c", s);
+    // or gets(s); can be used
+   printf("%s",s);
     return 0;
+    
 }
